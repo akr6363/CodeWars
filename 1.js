@@ -1,6 +1,5 @@
 function nearestSq(n) {
-
-    console.log(Math.round(Math.sqrt(n)) ** 2)
+    return Math.round(Math.sqrt(n)) ** 2
 }
 
-nearestSq(9999)
+nearestSq(111)
