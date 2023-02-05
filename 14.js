@@ -11,9 +11,7 @@ var maxSequence = function (arr) {
             currSum = 0
         }
     }
-
     return maxSumm
-
 }
 
 
