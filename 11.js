@@ -4,7 +4,6 @@ function generateHashtag(str) {
         console.log(false)
         return false
     } else {
-        console.log('#' + str.split(' ').filter(x => x !== '').map(el => el[0].toUpperCase() + el.slice(1)).join(''))
         return '#' + str.split(' ').filter(x => x !== '').map(el => el[0].toUpperCase() + el.slice(1)).join('')
     }
 

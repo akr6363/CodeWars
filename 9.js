@@ -1,6 +1,5 @@
 Array.prototype.numberOfOccurrences = function (n) {
-    console.log(this.filter(el => el === n).length)
-
+    return this.filter(el => el === n).length
 
 }
 
