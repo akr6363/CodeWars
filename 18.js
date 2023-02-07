@@ -23,34 +23,3 @@ function a(n) {
 
 a(18)
 
-// function a(n) {
-//     if (n % 2) n--                              
-//     if (n < 4) return ''                             
-//     return [...Array(n)].map((c, i) => {              
-//         var pad = Array(n - i).join(' ')                     
-//         var cen = Array(2 * i).join(' ')             
-//         if (i == 0) return pad + 'A' + pad                      
-//         if (2 * i == n) {                                     
-//             cen = Array.map(cen, (d, j) => j % 2 ? 'A' : ' ').join('') 
-//         }
-//         return pad + 'A' + cen + 'A' + pad                                                 
-//     }).join('\n')                                    
-// }
-
-
-function b(n) {
-    if (n % 2) n--
-    if (n < 4) return ''
-    return [...Array(n)].map((c, i) => {
-        var pad = Array(n - i).join(' ')
-        var cen = Array(2 * i).join(' ')
-        if (i == 0) return pad + 'A' + pad
-        if (2 * i == n) {
-            cen = Array.map(cen, (d, j) => j % 2 ? 'A' : ' ').join('')
-        }
-        return pad + 'A' + cen + 'A' + pad
-    }).join('\n')
-}
-
-
-b(8)
