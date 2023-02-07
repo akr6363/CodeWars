@@ -1,22 +1,15 @@
+const RomanNumbersMap = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 50,
+    'C': 100,
+    'D': 500,
+    'M': 1000
+}
+
 function solution(roman) {
-    let num = roman.split('').map(el => {
-        switch (el) {
-            case 'I':
-                return 1
-            case 'V':
-                return 5
-            case 'X':
-                return 10
-            case 'L':
-                return 50
-            case 'C':
-                return 100
-            case 'D':
-                return 500
-            case 'M':
-                return 1000
-        }
-    })
+    let num = roman.split('').map(el => RomanNumbersMap[el])
 
     for (i = 0; i < num.length; i++) {
         if (num[i] < num[i + 1]) {
@@ -25,14 +18,12 @@ function solution(roman) {
         }
     }
 
-    let summ = num.reduce((a, b) => {
+    return num.reduce((a, b) => {
         return a + b
     }, 0)
-    console.log(num)
-    console.log(summ)
-
-    // return summ
 }
 
+console.log(solution('MDCLXVI'))
 solution('MDCLXVI')
 solution('IV')
+
