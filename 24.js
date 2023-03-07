@@ -10,13 +10,13 @@ var snakesAndLadders = function (board, dice) {
             }
         }
         if (initialIndex === board.length) {
-            console.log(initialIndex - 1)
             return initialIndex - 1
         }
     }
-    console.log(initialIndex - 1)
     return initialIndex - 1;
 }
+
+
 
 var dice = [2, 1, 5, 1, 5, 4]
 var board = [0, 0, 3, 0, 0, 0, 0, -2, 0, 0, 0]
